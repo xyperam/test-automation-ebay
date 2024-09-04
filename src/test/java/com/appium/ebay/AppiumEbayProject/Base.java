@@ -19,7 +19,9 @@ import org.openqa.selenium.interactions.PointerInput.Origin;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
@@ -36,7 +38,7 @@ public class Base {
 	public AppiumDriverLocalService service;
 	
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
     public void configureAppium() throws MalformedURLException {
 		Map<String , String> env = new HashMap<String , String>(System.getenv());
 		env.put("ANDROID_HOME", "C:\\Users\\ASUS\\AppData\\Local\\Android\\Sdk");
@@ -66,6 +68,22 @@ public class Base {
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
+	@SuppressWarnings("deprecation")
+	@BeforeMethod
+	public void prepare() {
+	    driver.launchApp(); // Ini memastikan aplikasi diluncurkan
+	}
+
+	public void navigateToHomePage() {
+	    driver.findElement(By.id("com.ebay.mobile:id/home_button")).click();
+	    // Atau logika lain untuk memastikan halaman utama atau homepage
+	}
+
+	@AfterMethod
+	public void cleanup() {
+	    navigateToHomePage();
+	}
+
 	 public void scrollToEnd() {
     	 //scroll as long as the app has element
    		boolean canScrollMore;
@@ -156,8 +174,12 @@ public void swipeUsingW3C() {
      @AfterClass
      public void tearDown() {
     		
- 		driver.quit();
- 		service.stop();
+    	 if (driver != null) {
+             driver.quit();
+         }
+         if (service != null) {
+             service.stop();
+         }
      }
 
 }

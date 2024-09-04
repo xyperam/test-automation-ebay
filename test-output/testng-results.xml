@@ -1,25 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-04T00:01:28 WIB" name="Default suite" finished-at="2024-09-04T00:01:58 WIB" duration-ms="29869">
+  <suite started-at="2024-09-04T23:50:41 WIB" name="AppiumTestSuite" finished-at="2024-09-04T23:51:40 WIB" duration-ms="58738">
     <groups>
+      <group name="smoke">
+        <method signature="AddToCart.searchAndSelectAirJordan()[pri:0, instance:com.appium.ebay.AppiumEbayProject.AddToCart@3a7442c7]" name="searchAndSelectAirJordan" class="com.appium.ebay.AppiumEbayProject.AddToCart"/>
+        <method signature="AddToCart.searchAndSelectLaptop()[pri:0, instance:com.appium.ebay.AppiumEbayProject.AddToCart@3a7442c7]" name="searchAndSelectLaptop" class="com.appium.ebay.AppiumEbayProject.AddToCart"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-09-04T00:01:28 WIB" name="Default test" finished-at="2024-09-04T00:01:58 WIB" duration-ms="29869">
+    <test started-at="2024-09-04T23:50:41 WIB" name="Smoke Tests" finished-at="2024-09-04T23:51:40 WIB" duration-ms="58738">
       <class name="com.appium.ebay.AppiumEbayProject.AddToCart">
-        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.appium.ebay.AppiumEbayProject.AddToCart@663c9e7a]" started-at="2024-09-04T00:01:28 WIB" name="configureAppium" finished-at="2024-09-04T00:01:37 WIB" duration-ms="9106" status="PASS">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.appium.ebay.AppiumEbayProject.AddToCart@3a7442c7]" started-at="2024-09-04T23:50:41 WIB" name="configureAppium" finished-at="2024-09-04T23:50:56 WIB" duration-ms="14921" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configureAppium -->
-        <test-method signature="SearchTest()[pri:0, instance:com.appium.ebay.AppiumEbayProject.AddToCart@663c9e7a]" started-at="2024-09-04T00:01:37 WIB" name="SearchTest" finished-at="2024-09-04T00:01:57 WIB" duration-ms="19882" status="PASS">
+        <test-method signature="searchAndSelectAirJordan()[pri:0, instance:com.appium.ebay.AppiumEbayProject.AddToCart@3a7442c7]" started-at="2024-09-04T23:50:56 WIB" name="searchAndSelectAirJordan" finished-at="2024-09-04T23:51:29 WIB" duration-ms="33645" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [9ba5ffce-de10-461b-ada1-7afa8da40780, findElement {using=id, value=com.ebay.mobile:id/search_src_text}]
+Capabilities {appium:appActivity: com.ebay.mobile.home.impl.m..., appium:appPackage: com.ebay.mobile, appium:appWaitDuration: 30000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.ebay.mobile.home.impl.m..., appPackage: com.ebay.mobile, appWaitDuration: 30000, automationName: UIAutomator2, deviceName: Automation, platformName: android}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1857, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 9ba5ffce-de10-461b-ada1-7afa8da40780]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [9ba5ffce-de10-461b-ada1-7afa8da40780, findElement {using=id, value=com.ebay.mobile:id/search_src_text}]
+Capabilities {appium:appActivity: com.ebay.mobile.home.impl.m..., appium:appPackage: com.ebay.mobile, appium:appWaitDuration: 30000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.ebay.mobile.home.impl.m..., appPackage: com.ebay.mobile, appWaitDuration: 30000, automationName: UIAutomator2, deviceName: Automation, platformName: android}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1857, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 9ba5ffce-de10-461b-ada1-7afa8da40780
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at com.appium.ebay.AppiumEbayProject.AddToCart.searchAndSelectProduct(AddToCart.java:27)
+at com.appium.ebay.AppiumEbayProject.AddToCart.searchAndSelectAirJordan(AddToCart.java:32)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.appium.ebay.AppiumEbayProject.AddToCart@663c9e7a]" started-at="2024-09-04T00:01:57 WIB" name="tearDown" finished-at="2024-09-04T00:01:58 WIB" duration-ms="836" status="PASS">
+        </test-method> <!-- searchAndSelectAirJordan -->
+        <test-method signature="searchAndSelectLaptop()[pri:0, instance:com.appium.ebay.AppiumEbayProject.AddToCart@3a7442c7]" started-at="2024-09-04T23:51:29 WIB" name="searchAndSelectLaptop" finished-at="2024-09-04T23:51:40 WIB" duration-ms="10098" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [9ba5ffce-de10-461b-ada1-7afa8da40780, findElement {using=id, value=com.ebay.mobile:id/search_box}]
+Capabilities {appium:appActivity: com.ebay.mobile.home.impl.m..., appium:appPackage: com.ebay.mobile, appium:appWaitDuration: 30000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.ebay.mobile.home.impl.m..., appPackage: com.ebay.mobile, appWaitDuration: 30000, automationName: UIAutomator2, deviceName: Automation, platformName: android}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1857, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 9ba5ffce-de10-461b-ada1-7afa8da40780]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [9ba5ffce-de10-461b-ada1-7afa8da40780, findElement {using=id, value=com.ebay.mobile:id/search_box}]
+Capabilities {appium:appActivity: com.ebay.mobile.home.impl.m..., appium:appPackage: com.ebay.mobile, appium:appWaitDuration: 30000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.ebay.mobile.home.impl.m..., appPackage: com.ebay.mobile, appWaitDuration: 30000, automationName: UIAutomator2, deviceName: Automation, platformName: android}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1857, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 9ba5ffce-de10-461b-ada1-7afa8da40780
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at com.appium.ebay.AppiumEbayProject.AddToCart.searchAndSelectProduct(AddToCart.java:13)
+at com.appium.ebay.AppiumEbayProject.AddToCart.searchAndSelectLaptop(AddToCart.java:37)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
+        </test-method> <!-- searchAndSelectLaptop -->
       </class> <!-- com.appium.ebay.AppiumEbayProject.AddToCart -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Smoke Tests -->
+  </suite> <!-- AppiumTestSuite -->
 </testng-results>
